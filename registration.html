@@ -1,0 +1,147 @@
+<html ng-app>
+  <head>
+    <title>My AngularJS App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body style="background-color:#2C3E50">
+      <div class="container">
+      <div class="row text-center">
+<div class="col-xs-12 col-sm-12 col-md-12"></div>   
+          <h1 style=color:WHITE> DYNAMIC REGISTRATION FORM</h1>
+          </div>
+      </div>
+<div class="container" >
+            <form class="form-horizontal" role="form">
+                <div class="row">
+                <div class="form-group col-xs-6 col-sm-6 col-md-6">
+                    <label for="firstName" class=" control-label">Full Name</label>
+                    <div>
+                        <input type="text" name="first_name" placeholder="Full Name"  ng-model="first_name" class="form-control" autofocus>
+                     
+                    </div>
+                         
+                </div>
+                    <div class="col-sm-6 col-md-6 col-xs-6">
+                        <h3>Full Name:<span style="color:#8BE408">{{first_name|uppercase}}</span></h3>
+                    </div>
+                </div>
+                  <div class="row">
+                <div class="form-group col-xs-6 col-sm-6 col-md-6">
+                    <label for="firstName" class=" control-label">Father Name</label>
+                    <div>
+                        <input type="text" name="father_name" placeholder="Full Name" ng-model="father_name" class="form-control" autofocus>
+                 
+                    </div>
+                </div>
+                                          <div class="col-sm-6 col-md-6 col-xs-6">
+                                              <h3>Father Name:<span style="color:#E47608">{{father_name|uppercase}}</span></h3>
+                    </div>
+                </div>
+                
+                <div class="row">
+                <div class="form-group col-xs-6 col-sm-6 col-md-6">
+                    <label for="email" class=" control-label">Email</label>
+                    <div>
+                        <input type="email" name="email" placeholder="Email" ng-model="email" class="form-control">
+                    </div>
+                </div>
+                     <div class="col-sm-6 col-md-6 col-xs-6">
+                         <h3>Email:<span style="color:#726ED9">{{email}}</span></h3>
+                    </div>
+                </div>
+                
+                <div class="row">
+                <div class="form-group col-xs-6 col-sm-6 col-md-6">
+                    <label for="password" class="control-label">Ph.No</label>
+                    <div>
+                        <input type="number" name="number" ng-model="password" placeholder="phone" class="form-control">
+                    </div>
+                </div>
+                      <div class="col-sm-6 col-md-6 col-xs-6">
+                          <h3>Password:<span style="color:#C60C30">{{password}}</span></h3>
+                    </div>
+                </div>
+                
+                <div class="row">
+                <div class="form-group col-xs-6 col-sm-6 col-md-6">
+                    <label for="birthDate" class="control-label">Date of Birth</label>
+                    <div >
+                        <input type="date" name="dob" ng-model="dob" class="form-control">
+                    </div>
+                </div>
+                      <div class="col-sm-6 col-md-6 col-xs-6">
+                          <h3>Date Of Birth:<span style="color:#F9F500">{{dob}}</span></h3>
+                    </div>
+                </div>
+                <div class="row">
+        
+                <div class="form-group col-xs-6 col-sm-6 col-md-6">
+                    <label for="country" class=" control-label">Country</label>
+                    <div>
+                        <select name="country" class="form-control" ng-model="country">
+                            <option>Afghanistan</option>
+                            <option>Bahamas</option>
+                            <option>Cambodia</option>
+                            <option>Denmark</option>
+                            <option>Ecuador</option>
+                            <option>Fiji</option>
+                            <option>Gabon</option>
+                            <option>Haiti</option>
+                        </select>
+                    </div>
+                </div>
+                    
+                      <div class="col-sm-6 col-md-6 col-xs-6">
+                          <h3>Country:<span style="color:#23FB00">{{country|uppercase}}</span></h3>
+                    </div>
+                </div>
+                
+                    <!-- /.form-group -->
+                <div class="row">
+                <div class="form-group col-xs-6 col-sm-6 col-md-6">
+                    <label class="control-label">Gender</label>
+                    <div>
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-2">
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" ng-model="gender" value="Female">Female
+                                </label>
+                            </div>
+                            <div class='col-xs-6 col-sm-6 col-md-6'>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Male" ng-model="gender">Male
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      <div class="col-sm-6 col-md-6 col-xs-6">
+                          <h3>Gender:<span style="color:#69DFE3">{{gender}}</span></h3>
+                    </div><!-- /.form-group -->
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6 col-md-6 col-xs-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">I accept <a href="#">terms</a> and conditions.
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+  </body>
+</html>
